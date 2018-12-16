@@ -13,7 +13,7 @@ class LandmarksController < ApplicationController
   post '/landmarks/new' do
     binding.pry
     @landmark = Landmark.create(params[:landmark])
-
+    erb :'/landmarks/new'
   end
 
 
