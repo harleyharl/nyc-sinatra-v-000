@@ -17,7 +17,7 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks' do
-    binding.pry
+    # binding.pry
     @figures = Figure.all
     @landmark = Landmark.create(params[:landmark])
     erb :'/landmarks/:id'
