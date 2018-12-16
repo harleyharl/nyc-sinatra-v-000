@@ -11,7 +11,7 @@ class LandmarksController < ApplicationController
   end
 
   get '/landmarks/:id/edit' do
-    binding.pry
+    # binding.pry
     @landmark = Landmark.find_by(id: params[:id])
     # @landmark.figure # @landmark.figure = [:landmark][:figure]
 
