@@ -56,7 +56,7 @@ class LandmarksController < ApplicationController
 
     @landmark.save
 
-    erb :'/landmarks/:id/show'
+    redirect '/landmarks/#{@landmark.id}'
 
   end
 
