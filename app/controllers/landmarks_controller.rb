@@ -18,7 +18,7 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/edit'
   end
 
-  post '/landmarks/:id' do
+  post '/landmarks' do
     # binding.pry
     @landmark = Landmark.create(id: params[:id])
 
@@ -49,11 +49,11 @@ class LandmarksController < ApplicationController
   #   # erb :'/landmarks/:id'
   # end
 
-  # post '/landmarks/:id' do
-  #   binding.pry
-  #   @landmark = Landmark.find_by(id: params[:id])
-  #   @landmark
-  # end
+  post '/landmarks/:id' do
+    binding.pry
+    @landmark = Landmark.find_by(id: params[:id])
+    @landmark
+  end
 
 
 end
