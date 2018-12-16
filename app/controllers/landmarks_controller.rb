@@ -5,6 +5,10 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/index'
   end
 
+  get '/landmarks/new' do
+    @landmark
+    erb :'/landmarks/new'
+  end
 
 
 end
