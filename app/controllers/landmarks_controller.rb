@@ -24,11 +24,13 @@ class LandmarksController < ApplicationController
 
     if !params[:landmark][:name].empty?
       @landmark.name = params[:landmark][:name]
-    end #maybe have to do the &&
+    end
 
     if !params[:landmark][:year_completed].empty?
       @landmark.name = params[:landmark][:name]
     end
+
+    @landmark.save
 
     erb :'/landmarks/show'
   end
