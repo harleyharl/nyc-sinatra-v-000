@@ -6,20 +6,15 @@ class LandmarksController < ApplicationController
   end
 
   get '/landmarks/new' do
-    # @landmark
     erb :'/landmarks/new'
   end
 
   get '/landmarks/:id/edit' do
-    # binding.pry
     @landmark = Landmark.find_by(id: params[:id])
-    # @landmark.figure # @landmark.figure = [:landmark][:figure]
-
     erb :'/landmarks/edit'
   end
 
   post '/landmarks' do
-    # binding.pry
     @landmark = Landmark.create(id: params[:id])
 
     if params[:landmark][:name] && !params[:landmark][:name].empty?
@@ -36,9 +31,7 @@ class LandmarksController < ApplicationController
   end
 
   get '/landmarks/:id' do
-    # binding.pry
     @landmark = Landmark.find_by(id: params[:id])
-    # @landmark.figure # @landmark.figure = [:landmark][:figure]
     erb :'/landmarks/show'
   end
 
@@ -55,7 +48,6 @@ class LandmarksController < ApplicationController
     end
 
     @landmark.save
-    # binding.pry
     redirect "/landmarks/#{@landmark.id}"
 
 
