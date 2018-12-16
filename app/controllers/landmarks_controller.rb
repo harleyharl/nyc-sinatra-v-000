@@ -22,11 +22,11 @@ class LandmarksController < ApplicationController
     # binding.pry
     @landmark = Landmark.create(id: params[:id])
 
-    if !params[:landmark][:name].empty?
+    if params[:landmark][:name] && !params[:landmark][:name].empty?
       @landmark.name = params[:landmark][:name]
     end
 
-    if !params[:landmark][:year_completed].empty?
+    if params[:landmark][:year_completed] && !params[:landmark][:year_completed].empty?
       @landmark.name = params[:landmark][:name]
     end
 
