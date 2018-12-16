@@ -10,6 +10,13 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/new'
   end
 
+  get '/landmarks/:id/edit' do
+    # binding.pry
+    @landmark = Landmark.find_by(id: params[:id])
+    @landmark.figure # @landmark.figure = [:landmark][:figure]
+    erb :'/landmarks/show'
+  end
+
   get '/landmarks/:id' do
     # binding.pry
     @landmark = Landmark.find_by(id: params[:id])
