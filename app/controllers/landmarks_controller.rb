@@ -36,7 +36,7 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks/:id' do
-    # binding.pry
+
     @landmark = Landmark.find_by(id: params[:id])
 
     if params[:landmark][:name] && !params[:landmark][:name].empty?
@@ -49,7 +49,6 @@ class LandmarksController < ApplicationController
 
     @landmark.save
     redirect "/landmarks/#{@landmark.id}"
-
 
   end
 
