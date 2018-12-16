@@ -55,8 +55,8 @@ class LandmarksController < ApplicationController
     end
 
     @landmark.save
-    binding.pry
-    redirect '/landmarks/'
+    # binding.pry
+    # redirect '/landmarks/'
 
   end
 
