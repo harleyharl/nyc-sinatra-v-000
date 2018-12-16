@@ -12,7 +12,7 @@ class LandmarksController < ApplicationController
 
   get '/landmarks/:id' do
     binding.pry
-    @landmark = Landmark.find_by(id: params[:landmark][:figure]
+    @landmark = Landmark.find_by(id: params[:landmark][:figure])
     # @landmark.figure = [:landmark][:figure]
   end
 
