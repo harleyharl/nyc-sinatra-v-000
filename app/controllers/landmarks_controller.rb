@@ -61,6 +61,8 @@ class LandmarksController < ApplicationController
       @landmark.name = params[:landmark][:name]
     end
 
+    @landmark.save
+
     erb :'/landmarks/show'
 
   end
