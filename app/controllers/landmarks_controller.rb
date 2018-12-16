@@ -24,7 +24,7 @@ class LandmarksController < ApplicationController
 
     if !params[:landmark][:name].empty?
       @landmark.name = params[:landmark][:name]
-    end
+    end #maybe have to do the &&
 
     if !params[:landmark][:year_completed].empty?
       @landmark.name = params[:landmark][:name]
