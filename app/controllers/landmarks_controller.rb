@@ -55,8 +55,8 @@ class LandmarksController < ApplicationController
     end
 
     @landmark.save
-
-    erb :'/landmarks/show'
+    # 
+    # erb :'/landmarks/show'
 
   end
 
