@@ -60,6 +60,7 @@ class LandmarksController < ApplicationController
     if params[:landmark][:year_completed] && !params[:landmark][:year_completed].empty?
       @landmark.name = params[:landmark][:name]
     end
+    
   end
 
 
