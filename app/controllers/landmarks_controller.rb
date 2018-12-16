@@ -50,7 +50,7 @@ class LandmarksController < ApplicationController
   # end
 
   post '/landmarks/:id' do
-    @landmark = Landmark.all.find_by(id: params[:id])
+    @landmark = Landmark.find_by(id: params[:id])
   end
 
 
