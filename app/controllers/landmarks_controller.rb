@@ -49,5 +49,9 @@ class LandmarksController < ApplicationController
   #   # erb :'/landmarks/:id'
   # end
 
+  post '/landmarks/:id' do
+    "Hello World"
+  end
+
 
 end
