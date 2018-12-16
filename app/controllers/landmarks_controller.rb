@@ -10,7 +10,7 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/new'
   end
 
-  post '/landmarks/new' do
+  post '/landmarks' do
     binding.pry
     @figures = Figure.all
     @landmark = Landmark.create(params[:landmark])
