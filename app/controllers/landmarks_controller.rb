@@ -10,7 +10,7 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/new'
   end
 
-  get '/landmarks/:id'
+  get '/landmarks/:id' do
 
   end
 
