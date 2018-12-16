@@ -40,12 +40,12 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/show'
   end
 
-  post '/landmarks' do
-    # binding.pry
-    @figures = Figure.all
-    @landmark = Landmark.create(params[:landmark])
-    # erb :'/landmarks/:id'
-  end
+  # post '/landmarks' do
+  #   # binding.pry
+  #   @figures = Figure.all
+  #   @landmark = Landmark.create(params[:landmark])
+  #   # erb :'/landmarks/:id'
+  # end
 
 
 end
