@@ -10,6 +10,10 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/new'
   end
 
+  get '/landmarks/:id'
+
+  end
+
   post '/landmarks' do
     binding.pry
     @figures = Figure.all
