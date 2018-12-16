@@ -50,9 +50,16 @@ class LandmarksController < ApplicationController
   # end
 
   post '/landmarks/:id' do
-    binding.pry
+    # binding.pry
     @landmark = Landmark.find_by(id: params[:id])
-    @landmark
+
+    if params[:landmark][:name] && !params[:landmark][:name].empty?
+      @landmark.name = params[:landmark][:name]
+    end
+
+    if params[:landmark][:year_completed] && !params[:landmark][:year_completed].empty?
+      @landmark.name = params[:landmark][:name]
+    end
   end
 
 
