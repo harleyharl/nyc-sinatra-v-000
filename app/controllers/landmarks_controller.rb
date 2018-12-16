@@ -18,6 +18,10 @@ class LandmarksController < ApplicationController
       @landmark.name = params[:landmark][:name]
     end
 
+    if !params[:landmark][:name].empty?
+      @landmark.name = params[:landmark][:name]
+    end
+
     erb :'/landmarks/edit'
   end
 
