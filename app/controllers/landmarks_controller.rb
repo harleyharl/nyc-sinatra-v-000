@@ -14,9 +14,9 @@ class LandmarksController < ApplicationController
     binding.pry
     @landmark = Landmark.find_by(id: params[:id])
     # @landmark.figure # @landmark.figure = [:landmark][:figure]
-    if params[:landmark][:name]
+    if !params[:landmark][:name].empty?
       @landmark.name = params[:landmark][:name]
-    end 
+    end
 
     erb :'/landmarks/edit'
   end
