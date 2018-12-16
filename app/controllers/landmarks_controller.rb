@@ -13,14 +13,15 @@ class LandmarksController < ApplicationController
   get '/landmarks/:id/edit' do
     # binding.pry
     @landmark = Landmark.find_by(id: params[:id])
-    @landmark.figure # @landmark.figure = [:landmark][:figure]
+    # @landmark.figure # @landmark.figure = [:landmark][:figure]
+
     erb :'/landmarks/edit'
   end
 
   post '/landmarks/:id/edit' do
     binding.pry
     @landmark = Landmark.find_by(id: params[:id])
-    
+
     erb :'/landmarks/show'
   end
 
