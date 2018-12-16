@@ -18,7 +18,7 @@ class LandmarksController < ApplicationController
     binding.pry
     @figures = Figure.all
     @landmark = Landmark.create(params[:landmark])
-    erb :'/landmarks/new'
+    erb :'/landmarks/:id'
   end
 
 
