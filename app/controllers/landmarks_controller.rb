@@ -20,6 +20,7 @@ class LandmarksController < ApplicationController
   post '/landmarks/:id/edit' do
     # binding.pry
     @landmark = Landmark.find_by(id: params[:id])
+    erb :'/landmarks/show'
   end
 
   get '/landmarks/:id' do
