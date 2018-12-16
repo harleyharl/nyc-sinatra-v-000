@@ -14,6 +14,7 @@ class LandmarksController < ApplicationController
     binding.pry
     @landmark = Landmark.find_by(id: params[:id])
     # @landmark.figure # @landmark.figure = [:landmark][:figure]
+    @landmark.name = params[:landmark][:name]
 
     erb :'/landmarks/edit'
   end
