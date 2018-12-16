@@ -6,7 +6,7 @@ class LandmarksController < ApplicationController
   end
 
   get '/landmarks/new' do
-    @landmark
+    # @landmark
     erb :'/landmarks/new'
   end
 
